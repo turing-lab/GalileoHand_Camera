@@ -2,6 +2,19 @@ scriptId = "com.thalmic.examples.racethesun"
 scriptTitle = "Race the Sun"
 scriptDetailsUrl = ""
 
+--[[
+Controls:
+-Yaw dictates the flying direction
+-Double tap to pause or back up in menus
+-Do a fist to center the the yaw & roll values
+-Hold wave out to access mouse control
+-Wave in to left click
+]]
+
+--[[
+Free demo for Race the Sun in Kongregate
+]]
+
 centerYaw = 0
 
 centerRoll = 0
@@ -39,7 +52,7 @@ function onPoseEdge(pose, edge)
 		if(pose == "fist") then
 			--center yaw value when a pose starts; reset it when it is done
 			center()
-		elseif(pose == "fingersSpread") then
+		elseif(pose == "doubleTap") then
 			escape()
 		elseif(pose == "waveIn" or pose == "waveOut") then
 			if(deltaRoll > 0.2 or deltaRoll < -0.2) then
