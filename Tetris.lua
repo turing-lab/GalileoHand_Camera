@@ -5,8 +5,11 @@ scriptUrl = ""
 centerRoll = 0
 deltaRoll = 0
 
-count = 0
-fastCount = 0
+centerYaw = 0
+deltaYaw = 0
+
+countR = 0
+countY = 0
 
 actionStart = 0
 newTime = 0
@@ -17,21 +20,22 @@ Commands:
 -Roll the arm to either side to rotate the pieces
 -Double tap to calibrate the roll's center value
 -Utilize the fist action to make the bricks fall faster
--By waving in and out, move the pieces to the left- and right hand side, respectively
+-Changes in yaw move the pieces to the left- and right hand side, respectively
 -To pause and unpause the game spread the fingers
 ]]
 
 function onForegroundWindowChange(app, title)
 	myo.debug("App on Foreground: "  .. app .. " , Its title is: " .. title)
 	local titleMatch = (string.match(title, "Tetris") ~= nil or string.match(title, "tetris") ~= nil) and not(string.match(title, "Tetris.lua"))
---[[
-	if(titleMatch) then
+
+	--[[if(titleMatch) then
 		myo.setLockingPolicy("none")
 	else
 		myo.setLockingPolicy("standard")
 	end
 
-	return titleMatch]]
+	return titleMatch
+	]]
 	myo.setLockingPolicy("none")
 	return true
 end
@@ -42,8 +46,10 @@ function onPoseEdge(pose, edge)
 		forLefties(pose)
 		if(pose == "fist") then
 			--"down" key
-			checkTime()
+			myo.debug(newTime)
+			myo.debug(actionStart)
 			if(isItTime) then
+				isItTime = false
 				myo.keyboard("down_arrow", "down")
 				actionStart = 0
 				myo.vibrate("medium")
@@ -57,12 +63,6 @@ function onPoseEdge(pose, edge)
 		elseif(pose == "doubleTap") then
 			--center the roll value
 			center()
-		elseif(pose == "waveIn") then
-			--move left
-			left()
-		elseif(pose == "waveOut") then
-			--move right
-			right()
 		elseif(pose == "fingersSpread") then
 			--pause/unpause
 			togglePause()
@@ -73,15 +73,32 @@ function onPoseEdge(pose, edge)
 end
 
 function onPeriodic()
+	checkTime()
 
 	--keep gathering the roll value to be evaluated and decide the movement's direction
 	deltaRoll = deltaRadians(centerRoll, myo.getRoll())
-	--myo.debug("DeltaRoll: " .. tostring(deltaRoll))
-	count = count + 1
+	deltaYaw = deltaRadians(centerYaw, myo.getYaw())
 
-	if(deltaRoll > 0.3 or deltaRoll < -0.3) and count >= 100 then
+	countR = countR + 1
+	countY = countY + 1
+
+	if(deltaRoll > 0.3 or deltaRoll < -0.3) and countR >= 100 then
 		myo.keyboard("up_arrow", "press")
-		count = 0
+		countR = 0
+	end
+
+	if(countY >= 25) then
+		if(deltaYaw > 0.2) then
+			myo.keyboard("right_arrow", "press")
+			--myo.keyboard("left_arrow", "up")
+			myo.debug("Moving right")
+			countY = 0
+		elseif(deltaYaw < -0.2) then
+			myo.keyboard("left_arrow", "press")
+			--myo.keyboard("right_arrow", "up")
+			myo.debug("Moving left")
+			countY = 0
+		end
 	end
 end
 
@@ -110,6 +127,7 @@ end
 --Basic commands:
 function center() 
 	centerRoll = myo.getRoll()
+	centerYaw = myo.getYaw()
 	myo.vibrate("short")
 	myo.debug("Centered")
 end
@@ -145,13 +163,9 @@ function right()
 end	
 
 function checkTime()
-	myo.debug(newTime)
-	myo.debug(actionStart)
-
-	if(newTime >= actionStart+400) then
+	if(newTime > actionStart + 400) then
 		isItTime = true
 	else
 		isItTime = false
 	end
-	myo.debug(tostring(isItTime))
 end
