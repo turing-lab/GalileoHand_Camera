@@ -21,13 +21,17 @@ function onPoseEdge(pose, edge)
 		pose = forLefties(pose)
 		if(pose == "doubleTap") then
 			myo.keyboard("a", "press")			--Activate action
+			myo.keyboard("return", "press")
 		elseif(pose == "fingersSpread") then
 			myo.keyboard("d", "press")			--Deactivate action
+			myo.keyboard("return", "press")
 		elseif(pose == "waveIn") then
 			myo.keyboard("p", "press")			--move back to Previous action
+			myo.keyboard("return", "press")
 			doubleVibrate()
 		elseif(pose == "waveOut") then
 			myo.keyboard("n", "press")			--move on to Next action
+			myo.keyboard("return", "press")
 			myo.vibrate("short")
 		end
 	end
