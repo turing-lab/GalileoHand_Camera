@@ -5,7 +5,7 @@ scriptUrl = ""
 function onForegroundWindowChange(app, title)
 	--myo.debug("App on Foreground: " .. app .. " , Its title is: " .. title)
 
-	--[[local stringMatch = string.match(title, "PuTTY") ~= nil
+	local stringMatch = string.match(title, "PuTTY") ~= nil
 
 	if(stringMatch) then
 		myo.setLockingPolicy("none")
@@ -13,9 +13,9 @@ function onForegroundWindowChange(app, title)
 		myo.setLockingPolicy("standard")
 	end
 
-	return stringMatch]]
-	myo.setLockingPolicy("none")
-	return true
+	return stringMatch
+	--[[myo.setLockingPolicy("none")
+	return true]]
 end
 
 function onPoseEdge(pose, edge)
