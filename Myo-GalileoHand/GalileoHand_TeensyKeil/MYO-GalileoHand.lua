@@ -39,19 +39,24 @@ function onPoseEdge(pose, edge)
 		if(pose == "fist") then
 			myo.keyboard("a", "press")			--Activate action
 			myo.keyboard("return", "press")
-		elseif(pose == "doubleTap") then
+		elseif(pose == --[["doubleTap"]] "fingersSpread") then
 			myo.keyboard("d", "press")			--Deactivate action
 			myo.keyboard("return", "press")
 		elseif(pose == "waveIn") then
 			myo.keyboard("p", "press")			--move back to Previous action
 			myo.keyboard("return", "press")
 			doubleVibrate()
-		elseif(pose == "fingersSpread" or pose == "waveOut") then
+		elseif(--[[pose == "fingersSpread" or]] pose == "waveOut") then
 			myo.keyboard("n", "press")			--move on to Next action
 			myo.keyboard("return", "press")
 			myo.vibrate("short")
 		end
 	end
+end
+
+function onPeriodic()
+
+
 end
 
 function forLefties(pose)
@@ -78,5 +83,5 @@ end
 --[[
 	For our custom calibration profile:
 	-similar to the described above, but for waveOut you just move your arm outwards
-	-fingersSpread is not supported properly
+	-fingersSpread is imitated by raising your arm forward lightly
 ]]
