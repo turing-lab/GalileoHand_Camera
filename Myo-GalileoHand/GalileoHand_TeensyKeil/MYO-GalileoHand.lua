@@ -54,11 +54,6 @@ function onPoseEdge(pose, edge)
 	end
 end
 
-function onPeriodic()
-
-
-end
-
 function forLefties(pose)
 	if(myo.getArm() == "left") then
 		if(pose == "waveIn") then
