@@ -1,57 +1,0 @@
-Dependencies for Project 'GalileoHand_TeensyKeil', Target 'Target 1': (DO NOT MODIFY !)
-F (.\main.c)(0x5BCA24F8)(--c99 -c --cpu Cortex-M4 -D__EVAL -g -O0 --apcs=interwork --split_sections-I D:\TuringLab\GalileoHand_UNICAMP\GalileoHand_TeensyKeil\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\Jansson\1.0.0\src-I C:\Keil_v5\ARM\PACK\Keil\Kinetis_K20_DFP\1.5.2\Device\Include-D__UVISION_VERSION="520" -D_RTE_ -DMK20DX256xxx7-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
-I (C:\Keil_v5\ARM\PACK\Keil\Kinetis_K20_DFP\1.5.2\Device\Include\MK20D7.h)(0x585C40EA)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x58990E6A)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x56FF07BE)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x58990E6A)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x58990E6A)
-I (C:\Keil_v5\ARM\PACK\Keil\Kinetis_K20_DFP\1.5.2\Device\Include\system_MK20D7.h)(0x57508B58)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\arm_math.h)(0x58990E6A)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x56FF07BE)
-I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x56FF07B6)
-I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x56FF07BE)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x56FF07BE)
-I (C:\Keil_v5\ARM\PACK\Keil\Jansson\1.0.0\src\jansson.h)(0x542D4DA0)
-I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x56FF07C0)
-I (C:\Keil_v5\ARM\PACK\Keil\Jansson\1.0.0\src\jansson_config.h)(0x5512C860)
-I (drivers.h)(0x5A8EF8F6)
-I (finger.h)(0x5B1142D2)
-F (.\drivers.c)(0x5AD4ABFF)(--c99 -c --cpu Cortex-M4 -D__EVAL -g -O0 --apcs=interwork --split_sections-I D:\TuringLab\GalileoHand_UNICAMP\GalileoHand_TeensyKeil\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\Jansson\1.0.0\src-I C:\Keil_v5\ARM\PACK\Keil\Kinetis_K20_DFP\1.5.2\Device\Include-D__UVISION_VERSION="520" -D_RTE_ -DMK20DX256xxx7-o .\objects\drivers.o --omf_browse .\objects\drivers.crf --depend .\objects\drivers.d)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x56FF07BE)
-I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x56FF07BE)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x56FF07BE)
-I (C:\Keil_v5\ARM\PACK\Keil\Kinetis_K20_DFP\1.5.2\Device\Include\MK20D7.h)(0x585C40EA)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x58990E6A)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x58990E6A)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x58990E6A)
-I (C:\Keil_v5\ARM\PACK\Keil\Kinetis_K20_DFP\1.5.2\Device\Include\system_MK20D7.h)(0x57508B58)
-I (drivers.h)(0x5A8EF8F6)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\arm_math.h)(0x58990E6A)
-I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x56FF07B6)
-F (.\drivers.h)(0x5A8EF8F6)()
-F (.\finger.c)(0x5B03340D)(--c99 -c --cpu Cortex-M4 -D__EVAL -g -O0 --apcs=interwork --split_sections-I D:\TuringLab\GalileoHand_UNICAMP\GalileoHand_TeensyKeil\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\Jansson\1.0.0\src-I C:\Keil_v5\ARM\PACK\Keil\Kinetis_K20_DFP\1.5.2\Device\Include-D__UVISION_VERSION="520" -D_RTE_ -DMK20DX256xxx7-o .\objects\finger.o --omf_browse .\objects\finger.crf --depend .\objects\finger.d)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x56FF07BE)
-I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x56FF07BE)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x56FF07BE)
-I (C:\Keil_v5\ARM\PACK\Keil\Kinetis_K20_DFP\1.5.2\Device\Include\MK20D7.h)(0x585C40EA)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x58990E6A)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x58990E6A)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x58990E6A)
-I (C:\Keil_v5\ARM\PACK\Keil\Kinetis_K20_DFP\1.5.2\Device\Include\system_MK20D7.h)(0x57508B58)
-I (drivers.h)(0x5A8EF8F6)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\arm_math.h)(0x58990E6A)
-I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x56FF07B6)
-I (finger.h)(0x5B1142D2)
-F (.\finger.h)(0x5B1142D2)()
-F (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Lib\ARM\arm_cortexM4l_math.lib)(0x58990E6E)()
-F (C:\Keil_v5\ARM\PACK\Keil\Jansson\1.0.0\lib\jansson_CM3LE.lib)(0x55147C86)()
-F (RTE\Data_Exchange\jansson_config.c)(0x55146AA4)(--c99 -c --cpu Cortex-M4 -D__EVAL -g -O0 --apcs=interwork --split_sections-I D:\TuringLab\GalileoHand_UNICAMP\GalileoHand_TeensyKeil\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\Jansson\1.0.0\src-I C:\Keil_v5\ARM\PACK\Keil\Kinetis_K20_DFP\1.5.2\Device\Include-D__UVISION_VERSION="520" -D_RTE_ -DMK20DX256xxx7-o .\objects\jansson_config.o --omf_browse .\objects\jansson_config.crf --depend .\objects\jansson_config.d)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x56FF07BE)
-F (RTE\Device\MK20DX256xxx7\startup_MK20D7.s)(0x5AD6380A)(--cpu Cortex-M4 --pd "__EVAL SETA 1" -g --apcs=interwork -I D:\TuringLab\GalileoHand_UNICAMP\GalileoHand_TeensyKeil\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\Jansson\1.0.0\src-I C:\Keil_v5\ARM\PACK\Keil\Kinetis_K20_DFP\1.5.2\Device\Include--pd "__UVISION_VERSION SETA 520" --pd "_RTE_ SETA 1" --pd "MK20DX256xxx7 SETA 1"--list .\listings\startup_mk20d7.lst --xref -o .\objects\startup_mk20d7.o --depend .\objects\startup_mk20d7.d)
-F (RTE\Device\MK20DX256xxx7\system_MK20D7.c)(0x59129957)(--c99 -c --cpu Cortex-M4 -D__EVAL -g -O0 --apcs=interwork --split_sections-I D:\TuringLab\GalileoHand_UNICAMP\GalileoHand_TeensyKeil\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\Jansson\1.0.0\src-I C:\Keil_v5\ARM\PACK\Keil\Kinetis_K20_DFP\1.5.2\Device\Include-D__UVISION_VERSION="520" -D_RTE_ -DMK20DX256xxx7-o .\objects\system_mk20d7.o --omf_browse .\objects\system_mk20d7.crf --depend .\objects\system_mk20d7.d)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x56FF07BE)
-I (C:\Keil_v5\ARM\PACK\Keil\Kinetis_K20_DFP\1.5.2\Device\Include\MK20D7.h)(0x585C40EA)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x58990E6A)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x58990E6A)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x58990E6A)
-I (C:\Keil_v5\ARM\PACK\Keil\Kinetis_K20_DFP\1.5.2\Device\Include\system_MK20D7.h)(0x57508B58)
